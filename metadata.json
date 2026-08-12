@@ -1,0 +1,6 @@
+{
+  "name": "Microskill Arcade",
+  "description": "Evidence-based microlearning platform across Typing, Languages, Math, and Coding with spaced repetition and adaptive difficulty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
