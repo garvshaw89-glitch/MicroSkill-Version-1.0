@@ -2,7 +2,7 @@
 
 > **Version 1.0** | Evidence-based microlearning platform delivering 5–15 minute skill acquisition sessions across typing, languages, math, and coding with adaptive difficulty, spaced repetition scheduling, and retention analytics.
 
-App Demo: https://microskillversion-10.vercel.app/
+Live Demo: https://microskillversion-10.vercel.app/
 ---
 
 ## 🚀 About The Project
