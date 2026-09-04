@@ -1,4 +1,4 @@
-# 🕹️ Microskill Arcade
+h# 🕹️ Microskill Arcade
 
 > **Version 1.0** | Evidence-based microlearning platform delivering 5–15 minute skill acquisition sessions across typing, languages, math, and coding with adaptive difficulty, spaced repetition scheduling, and retention analytics.
 
@@ -79,7 +79,7 @@ The core persistent layer (`PostgreSQL`) relies on the following foundational ta
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-org/microskill-arcade.git
+git clone https://github.com/garvshaw89-glitch/microskill-arcade.git
 cd microskill-arcade
 
 ```
