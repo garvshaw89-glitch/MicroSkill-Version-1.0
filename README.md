@@ -179,7 +179,7 @@ When launching the app for the first time, users are greeted with a customized p
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/microskill-arcade.git
+git clone https://github.com/garvshaw89-glitch/microskill-arcade.git
 
 # 2. Navigate to project root
 cd microskill-arcade
