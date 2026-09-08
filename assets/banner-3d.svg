@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Neon Accents -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="emeraldTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <linearGradient id="amberRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.7" />
+    </linearGradient>
+
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowSubtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-16px) rotate(1deg); }
+    }
+    @keyframes floatMedium {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-24px) rotate(-2deg); }
+    }
+    @keyframes floatFast {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-12px) scale(1.03); }
+    }
+    @keyframes pulseGrid {
+      0%, 100% { opacity: 0.18; }
+      50% { opacity: 0.38; }
+    }
+    @keyframes rotate3D {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes neonBlink {
+      0%, 100% { opacity: 0.95; filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.9)); }
+      50% { opacity: 0.7; filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.6)); }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .floater-1 { animation: floatSlow 6s ease-in-out infinite; }
+    .floater-2 { animation: floatMedium 5s ease-in-out infinite 0.8s; }
+    .floater-3 { animation: floatFast 4s ease-in-out infinite 1.6s; }
+    .floater-4 { animation: floatSlow 7s ease-in-out infinite 2.4s; }
+    .grid-lines { animation: pulseGrid 4s ease-in-out infinite; }
+    .neon-glow { animation: neonBlink 3.5s ease-in-out infinite; }
+    .rotor { transform-origin: 1040px 240px; animation: rotate3D 24s linear infinite; }
+    .rotor-rev { transform-origin: 1040px 240px; animation: rotate3D 16s linear infinite reverse; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="480" fill="url(#bgGrad)" rx="16" />
+
+  <!-- 3D Perspective Isometric Ground Grid -->
+  <g class="grid-lines" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35">
+    <!-- Perspective lines radiating from vanishing point (600, 180) -->
+    <line x1="600" y1="200" x2="-200" y2="520" />
+    <line x1="600" y1="200" x2="0" y2="520" />
+    <line x1="600" y1="200" x2="200" y2="520" />
+    <line x1="600" y1="200" x2="400" y2="520" />
+    <line x1="600" y1="200" x2="600" y2="520" />
+    <line x1="600" y1="200" x2="800" y2="520" />
+    <line x1="600" y1="200" x2="1000" y2="520" />
+    <line x1="600" y1="200" x2="1200" y2="520" />
+    <line x1="600" y1="200" x2="1400" y2="520" />
+    
+    <!-- Transverse Isometric Grid Lines -->
+    <ellipse cx="600" cy="380" rx="280" ry="40" fill="none" stroke="#6366f1" stroke-width="1.2" stroke-dasharray="6,6" />
+    <ellipse cx="600" cy="420" rx="460" ry="70" fill="none" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="8,8" />
+    <ellipse cx="600" cy="470" rx="660" ry="105" fill="none" stroke="#06b6d4" stroke-width="1.8" />
+  </g>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="240" cy="140" r="140" fill="#38bdf8" fill-opacity="0.08" filter="url(#glow)" />
+  <circle cx="980" cy="240" r="180" fill="#8b5cf6" fill-opacity="0.12" filter="url(#glow)" />
+  <circle cx="600" cy="80" r="120" fill="#10b981" fill-opacity="0.06" filter="url(#glow)" />
+
+  <!-- RIGHT SIDE: 3D Rotating Geometric Wireframes & Isometric Cubes -->
+  <g id="isometric-3d-cluster">
+    <!-- Big 3D Gyro Rings -->
+    <g class="rotor">
+      <ellipse cx="1040" cy="240" rx="140" ry="50" fill="none" stroke="url(#cyanPurple)" stroke-width="2" stroke-dasharray="14,8" filter="url(#glowSubtle)" />
+    </g>
+    <g class="rotor-rev">
+      <ellipse cx="1040" cy="240" rx="120" ry="42" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="8,6" opacity="0.8" />
+      <ellipse cx="1040" cy="240" rx="90" ry="90" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    </g>
+
+    <!-- Center 3D Isometric Cube 1 (Primary - Floating) -->
+    <g class="floater-1" transform="translate(1040, 210)">
+      <!-- Top Face -->
+      <polygon points="0,-48 48,-24 0,0 -48,-24" fill="url(#cubeTop)" stroke="#7dd3fc" stroke-width="1.5" />
+      <!-- Left Face -->
+      <polygon points="-48,-24 0,0 0,56 -48,32" fill="url(#cubeLeft)" stroke="#38bdf8" stroke-width="1.5" />
+      <!-- Right Face -->
+      <polygon points="0,0 48,-24 48,32 0,56" fill="url(#cubeRight)" stroke="#818cf8" stroke-width="1.5" />
+      <!-- Core Glow -->
+      <circle cx="0" cy="4" r="14" fill="#38bdf8" filter="url(#glow)" opacity="0.7" />
+      <!-- Top Symbol (Keyboard / Brain) -->
+      <path d="M-12,-26 L12,-20 L0,-12 Z" fill="#ffffff" opacity="0.9" />
+    </g>
+
+    <!-- Floating 3D Isometric Cube 2 (Languages - Emerald) -->
+    <g class="floater-2" transform="translate(900, 130) scale(0.65)">
+      <polygon points="0,-44 44,-22 0,0 -44,-22" fill="#34d399" fill-opacity="0.85" stroke="#6ee7b7" stroke-width="1.5" />
+      <polygon points="-44,-22 0,0 0,50 -44,28" fill="#059669" fill-opacity="0.9" stroke="#10b981" stroke-width="1.5" />
+      <polygon points="0,0 44,-22 44,28 0,50" fill="#065f46" fill-opacity="0.9" stroke="#047857" stroke-width="1.5" />
+      <text x="0" y="24" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="22" fill="#ffffff">A/文</text>
+    </g>
+
+    <!-- Floating 3D Isometric Cube 3 (Math - Amber) -->
+    <g class="floater-3" transform="translate(1140, 340) scale(0.55)">
+      <polygon points="0,-44 44,-22 0,0 -44,-22" fill="#fbbf24" fill-opacity="0.85" stroke="#fde68a" stroke-width="1.5" />
+      <polygon points="-44,-22 0,0 0,50 -44,28" fill="#d97706" fill-opacity="0.9" stroke="#b45309" stroke-width="1.5" />
+      <polygon points="0,0 44,-22 44,28 0,50" fill="#78350f" fill-opacity="0.9" stroke="#92400e" stroke-width="1.5" />
+      <text x="0" y="24" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="24" fill="#ffffff">∑</text>
+    </g>
+
+    <!-- Floating 3D Isometric Cube 4 (Coding - Violet) -->
+    <g class="floater-4" transform="translate(930, 360) scale(0.58)">
+      <polygon points="0,-44 44,-22 0,0 -44,-22" fill="#c084fc" fill-opacity="0.85" stroke="#e9d5ff" stroke-width="1.5" />
+      <polygon points="-44,-22 0,0 0,50 -44,28" fill="#7e22ce" fill-opacity="0.9" stroke="#9333ea" stroke-width="1.5" />
+      <polygon points="0,0 44,-22 44,28 0,50" fill="#3b0764" fill-opacity="0.9" stroke="#581c87" stroke-width="1.5" />
+      <text x="0" y="22" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="22" fill="#ffffff">&lt;/&gt;</text>
+    </g>
+  </g>
+
+  <!-- LEFT SIDE: High-Impact Typography & Metadata -->
+  <g transform="translate(72, 90)">
+    <!-- Top Micro Tag / Cyber Badge -->
+    <g class="floater-3">
+      <rect x="0" y="0" width="260" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="16" cy="16" r="5" fill="#10b981" filter="url(#glowSubtle)" />
+      <text x="32" y="20.5" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.5">
+        SPACED REPETITION ARCADE
+      </text>
+    </g>
+
+    <!-- Main Title with 3D Depth Shadow -->
+    <g transform="translate(0, 78)">
+      <!-- Back Shadow -->
+      <text x="2" y="2" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="#0284c7" opacity="0.3" letter-spacing="-1">
+        MICROSKILL ARCADE
+      </text>
+      <!-- Front Gradient Text -->
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#cyanPurple)" letter-spacing="-1" class="neon-glow">
+        MICROSKILL ARCADE
+      </text>
+    </g>
+
+    <!-- Subtitle Description -->
+    <text x="0" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="400" fill="#94a3b8" letter-spacing="0.2">
+      Master Core Cognitive Habits in Rapid 90-Second Micro-Intervals
+    </text>
+    <text x="0" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="400" fill="#64748b">
+      Adaptive SuperMemo-2 Spaced Repetition · Non-Repeating Shuffles · Universal Device Compatibility
+    </text>
+
+    <!-- 4 Interactive Pillar Chips -->
+    <g transform="translate(0, 195)">
+      <!-- Chip 1: Speed Typing -->
+      <g class="floater-1">
+        <rect x="0" y="0" width="132" height="38" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" />
+        <text x="14" y="24" font-family="monospace" font-size="12" font-weight="700" fill="#38bdf8">⌨️ SPEED TYPING</text>
+      </g>
+      
+      <!-- Chip 2: Polyglot -->
+      <g class="floater-2" transform="translate(142, 0)">
+        <rect x="0" y="0" width="128" height="38" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.2" />
+        <text x="14" y="24" font-family="monospace" font-size="12" font-weight="700" fill="#34d399">🌍 LANGUAGES</text>
+      </g>
+
+      <!-- Chip 3: Mental Math -->
+      <g class="floater-3" transform="translate(280, 0)">
+        <rect x="0" y="0" width="134" height="38" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.2" />
+        <text x="14" y="24" font-family="monospace" font-size="12" font-weight="700" fill="#fbbf24">⚡ MENTAL MATH</text>
+      </g>
+
+      <!-- Chip 4: Engineering -->
+      <g class="floater-4" transform="translate(424, 0)">
+        <rect x="0" y="0" width="146" height="38" rx="10" fill="#0f172a" stroke="#7e22ce" stroke-width="1.2" />
+        <text x="14" y="24" font-family="monospace" font-size="12" font-weight="700" fill="#c084fc">💻 SYSTEM CODE</text>
+      </g>
+    </g>
+
+    <!-- Metric Badges Row -->
+    <g transform="translate(0, 260)">
+      <text x="0" y="20" font-family="monospace" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1">
+        ● 84-DAY PRACTICE HEATMAPS   ● PEAK TIME-OF-DAY METRIC   ● 100% OFFLINE READY
+      </text>
+    </g>
+  </g>
+
+  <!-- Cyber Corner Accents -->
+  <path d="M 12 40 L 12 12 L 40 12" fill="none" stroke="#38bdf8" stroke-width="2" />
+  <path d="M 1188 40 L 1188 12 L 1160 12" fill="none" stroke="#8b5cf6" stroke-width="2" />
+  <path d="M 12 440 L 12 468 L 40 468" fill="none" stroke="#10b981" stroke-width="2" />
+  <path d="M 1188 440 L 1188 468 L 1160 468" fill="none" stroke="#f59e0b" stroke-width="2" />
+</svg>
