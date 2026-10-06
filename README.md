@@ -50,7 +50,7 @@
 
 The production application is live and accessible on any mobile device, tablet, or desktop browser:
 
-> **🔗 Production URL:** [https://microskillversion-10.vercel.app/](https://microskillversion-10.vercel.app/)
+> **🔗 Production URL:** []()
 
 - ⚡ **Instant Launch:** No installation or signup required to test — guest mode works out of the box.
 - 📱 **PWA & Cross-Device:** Fully responsive on iOS Safari, Android Chrome, iPads, and high-DPI monitors.
